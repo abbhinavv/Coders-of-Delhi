@@ -1,124 +1,123 @@
 # Coders-of-Delhi
 A pure Python project that cleans and structures messy user data, then builds a “People You May Know” feature by analyzing mutual friends—similar to friend recommendations on social networks.
 
-👥 CodeBook User Analysis & Friend Recommendation System
-📖 Project Overview
+# 👥 CodeBook User Analysis & People You May Know System
 
-This project simulates a real-world data analytics task assigned by a manager at CodeBook. The goal is to:
+## 📖 Project Overview
 
-Load and explore a messy user data dump
+This project simulates a real-world task assigned at **CodeBook**, where the objective is to analyze a messy user data dump using **pure Python**, clean and structure the data, and finally build a **“People You May Know”** recommendation feature based on mutual friends.
 
-Clean and structure the data using pure Python
+The project focuses on data preprocessing, logical problem-solving, and basic social network analysis without using external libraries like Pandas or NetworkX.
 
-Build a "People You May Know" feature based on mutual connections
+---
 
-The project demonstrates essential data preprocessing skills and basic social network analysis without relying on external libraries like Pandas or NetworkX.
+## 🎯 Objectives
 
-🎯 Objectives
-✅ Data Cleaning & Structuring
+### 1. Data Loading & Exploration
+- Load raw user data
+- Understand structure and inconsistencies
 
-Handle missing values
+### 2. Data Cleaning & Structuring
+- Handle missing values
+- Remove duplicate or inconsistent records
+- Standardize data formats
 
-Remove duplicate and inconsistent records
+### 3. Friend Recommendation System
+- Analyze mutual friends
+- Recommend new connections
+- Avoid suggesting existing friends
 
-Standardize data formats (IDs, names, connections, etc.)
+---
 
-🤝 Friend Recommendation System
+## 🛠️ Technologies Used
 
-Analyze user connections
+- Python (Pure Python)
+- Built-in modules only
 
-Identify mutual friends
+---
 
-Suggest new connections based on shared relationships
+## 📂 Project Structure
 
-🛠️ Technologies Used
 
-Python (Pure Python)
-
-Built-in modules only (collections, itertools, etc.)
-
-📂 Project Structure
 codebook-user-analysis/
 │
 ├── data/
-│   └── users_data.txt / users_data.json
+│ └── users_data.txt
 │
 ├── data_cleaning.py
-│   ├── load_data()
-│   ├── clean_missing_values()
-│   ├── remove_duplicates()
-│   └── standardize_data()
+│ ├── load_data()
+│ ├── handle_missing_values()
+│ ├── remove_duplicates()
+│ └── standardize_data()
 │
 ├── recommendations.py
-│   ├── find_mutual_friends()
-│   └── people_you_may_know()
+│ ├── find_mutual_friends()
+│ └── people_you_may_know()
 │
 ├── main.py
-│   └── Runs full pipeline
+│ └── Execute full workflow
 │
 └── README.md
 
-🔍 Data Cleaning Steps
 
-Missing Values Handling
+---
 
-Removed users with invalid IDs
+## 🧹 Data Cleaning Process
 
-Filled missing friend lists with empty lists
+- Removed users with missing or invalid IDs  
+- Filled missing friend lists with empty lists  
+- Eliminated duplicate user entries  
+- Standardized user and friend ID formats  
 
-Duplicate Removal
+---
 
-Eliminated duplicate user records
-
-Ensured unique user IDs
-
-Data Standardization
-
-Converted friend lists to consistent formats
-
-Normalized user identifiers
-
-🤖 “People You May Know” Logic
+## 🤝 People You May Know Logic
 
 A user is recommended another user if:
+- They are **not already friends**
+- They share **one or more mutual friends**
 
-They are not already connected
+### Example
 
-They share one or more mutual friends
-
-Example:
 User A → Friends: [B, C]
 User D → Friends: [B, C]
 
 Recommendation:
 A ↔ D (2 mutual friends)
 
-▶️ How to Run
+
+---
+
+## ▶️ How to Run
+
+```bash
 python main.py
 
-📌 Sample Output
 People You May Know for User 101:
 - User 205 (3 mutual friends)
 - User 319 (2 mutual friends)
 
-🚀 Future Improvements
+🚀 Future Enhancements
 
-Rank recommendations by number of mutual friends
+Rank recommendations by mutual friend count
 
-Add weighted relationships
+Improve performance for large datasets
 
-Convert to Pandas-based pipeline
+Add Pandas-based implementation
 
-Build a REST API or UI layer
+Build an API or frontend interface
 
 🧠 Key Learnings
 
-Real-world data is messy and needs preprocessing
+Handling messy real-world data
 
-Graph-like problems can be solved using basic Python
+Data cleaning using core Python
 
-Mutual friend logic is foundational for social platforms
+Implementing social network recommendation logic
+
+Working with graph-like relationships
 
 👨‍💻 Author
 
-Built as a hands-on data analytics and algorithmic thinking project.
+Created as a Python data analysis and algorithmic practice project.
+
